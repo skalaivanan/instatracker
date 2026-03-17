@@ -13,10 +13,10 @@ export default async function ReportsPage() {
     .eq('user_id', user!.id)
     .eq('is_active', true)
 
-  const { count: postCount } = await supabase
+  await supabase
     .from('competitor_posts')
     .select('id', { count: 'exact' })
-    .in('competitor_id', (competitors?.map(c => c) as any) || [])
+    .in('competitor_id', competitors?.map((c: any) => c.id) || [])
 
   return (
     <div className="p-8 max-w-5xl mx-auto animate-fade-in">

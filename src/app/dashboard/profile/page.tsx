@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
-import { Instagram, Link as LinkIcon, Users, Image, Heart, TrendingUp } from 'lucide-react'
+import { Instagram, Link as LinkIcon, Users, Image as ImageIcon, Heart, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
 
 export default async function ProfilePage() {
@@ -74,7 +74,7 @@ export default async function ProfilePage() {
               {[
                 { label: 'Followers', value: (igAccount.followers_count || 0).toLocaleString(), icon: Users, color: 'text-purple-500' },
                 { label: 'Following', value: (igAccount.following_count || 0).toLocaleString(), icon: Users, color: 'text-blue-500' },
-                { label: 'Posts', value: (igAccount.media_count || 0).toLocaleString(), icon: Image, color: 'text-brand-500' },
+                { label: 'Posts', value: (igAccount.media_count || 0).toLocaleString(), icon: ImageIcon, color: 'text-brand-500' },
               ].map(s => (
                 <div key={s.label} className="stat-card text-center">
                   <s.icon className={`w-5 h-5 ${s.color} mx-auto mb-1.5`} />

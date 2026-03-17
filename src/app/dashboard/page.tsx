@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
-import { Users, Image, Heart, MessageCircle, Eye, TrendingUp, Plus } from 'lucide-react'
+import { Users, Image as ImageIcon, Heart, MessageCircle, Eye, TrendingUp, Plus } from 'lucide-react'
 import Link from 'next/link'
 
 export default async function DashboardPage() {
@@ -93,7 +93,7 @@ export default async function DashboardPage() {
                     <img src={post.thumbnail_url} alt="" className="w-full h-full object-cover" />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                      <Image className="w-8 h-8 text-gray-300" />
+                      <ImageIcon className="w-8 h-8 text-gray-300" />
                     </div>
                   )}
                   <div className="post-overlay">

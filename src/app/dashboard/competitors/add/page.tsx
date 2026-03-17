@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
-import { Search, ArrowLeft, AlertCircle, CheckCircle, Instagram, Users, Image } from 'lucide-react'
+import { Search, ArrowLeft, AlertCircle, CheckCircle, Instagram, Users, Image as ImageIcon } from 'lucide-react'
 import Link from 'next/link'
 
 export default function AddCompetitorPage() {
@@ -147,7 +147,7 @@ export default function AddCompetitorPage() {
               <div className="text-xs text-gray-400">Followers</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-3.5 text-center">
-              <Image className="w-4 h-4 text-blue-500 mx-auto mb-1" />
+              <ImageIcon className="w-4 h-4 text-blue-500 mx-auto mb-1" />
               <div className="font-bold text-gray-900">{preview.media_count}</div>
               <div className="text-xs text-gray-400">Posts</div>
             </div>
